@@ -9,11 +9,12 @@ public class Planeta : MonoBehaviour
     public float speed;
     public float radio;
     public float angulo;
+    public float rotationSpeed;
     // Start is called before the first frame update
     void Start()
     {
         angulo = 0;
-        radio = transform.position.x;
+        radio = transform.position.y;
         Debug.Log("Nombre: " + nombre);
     }
 
@@ -22,6 +23,6 @@ public class Planeta : MonoBehaviour
     {
         angulo += speed*Time.deltaTime;
         transform.position =new Vector3 ( 0, radio * Mathf.Cos(angulo), radio * Mathf.Sin(angulo) );
-
+        transform.Rotate(new Vector3(rotationSpeed , 0, 0),rotationSpeed,Space.Self);
     }
 }
