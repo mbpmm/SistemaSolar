@@ -5,7 +5,6 @@ using UnityEngine;
 public class Planeta : MonoBehaviour
 {
     public string nombre;
-    public GameObject sol;
     public float speed;
     public float radio;
     public float angulo;
